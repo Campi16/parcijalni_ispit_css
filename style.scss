@@ -1,0 +1,62 @@
+$text-color:white;
+$prva-boja:black;
+$druga-boja:red;
+$treca-boja:orange;
+$border-color:white;
+
+body{
+    background-image:url("image.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:$text-color;
+    font-size: 6rem;
+    text-align: center;
+    position: relative;
+}
+.crni{
+    margin:5vw;
+    background-color: rgba($prva-boja,0.5);
+    animation: animacija1 2s linear forwards;
+    width: 25vw;
+    line-height: 30vh;
+    border: 2px solid $border-color;
+    animation: down 1.5s ease forwards;    
+}
+.crveni{
+    margin:5vw;
+    background-color: rgba($druga-boja,0.5);
+    width: 25vw;
+    line-height: 30vh;
+    border: 2px solid $border-color;
+    transform: translateY(-1000px);
+    animation: down 1.5s ease 1.5s forwards;
+}
+.zuti{
+    margin:5vw;
+    background-color: rgba($treca-boja,0.5);
+    width: 25vw;
+    line-height: 30vh;
+    border: 2px solid $border-color;
+    transform: translateY(-1000px);
+    animation: down 1.5s ease 3s forwards;
+}
+
+@keyframes down { 
+    0% {
+        transform: translateY(-700px); 
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
